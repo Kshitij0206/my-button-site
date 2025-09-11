@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The NO Challenge</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f8ff;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      padding: 1rem 2rem;
+      margin: 1rem;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .btn-yes {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .btn-no {
+      background-color: #dc3545;
+      color: white;
+      position: absolute; /* absolute for full-page movement */
+    }
+  </style>
+</head>
+<body>
+  <h1>Try to click the No button</h1>
+  <button class="btn btn-yes" onclick="alert('Yay! I knew it 😎')">Yes</button>
+  <button class="btn btn-no" onclick="alert('NOOOOO!')">No</button>
+
+  <script>
+    const noBtn = document.querySelector('.btn-no');
+
+    noBtn.addEventListener('mouseover', () => {
+      const btnWidth = noBtn.offsetWidth;
+      const btnHeight = noBtn.offsetHeight;
+
+      const maxX = window.innerWidth - btnWidth;
+      const maxY = window.innerHeight - btnHeight;
+
+      const randomX = Math.floor(Math.random() * maxX);
+      const randomY = Math.floor(Math.random() * maxY);
+
+      noBtn.style.left = randomX + 'px';
+      noBtn.style.top = randomY + 'px';
+    });
+  </script>
+</body>
+</html>

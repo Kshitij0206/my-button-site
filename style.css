@@ -1,0 +1,38 @@
+body
+{
+   background-image:url(avc.jpg) ;
+   background-repeat: no-repeat;
+   background-size: cover;
+   display:flex;
+   justify-content: center;
+}
+#username
+{
+    width: 10%;
+    height: 10px;
+    border-radius: 25px;
+    border: 2px solid #333;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+#password
+{
+    width: 10%;
+    height: 10px;
+    border-radius: 25px;
+    border: 2px solid #333;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+#submit
+{
+    width: 20%;
+    height: 40px;
+    border-radius: 25px;
+    border: 2px solid #333;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+}
